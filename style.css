@@ -7,8 +7,8 @@
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #ffecd2, #fcb69f);
-  color: #111;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f5f5f5;
   line-height: 1.6;
 }
 
@@ -22,13 +22,13 @@ body {
 
 /* Хедер */
 .site-header {
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid #eee;
+  background: rgba(20, 20, 40, 0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
   position: sticky;
   top: 0;
   z-index: 40;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
 }
 
 .site-header .container {
@@ -47,41 +47,43 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #ff4d4d, #ff9900);
+  background: linear-gradient(135deg, #00ffa3, #03e1ff, #7c2ae8);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
   color: #fff;
   font-size: 22px;
-  box-shadow: 0 4px 15px rgba(255,77,77,0.4);
+  box-shadow: 0 4px 20px rgba(0,255,163,0.6);
 }
 
 .tagline {
   margin: 0;
-  color: #444;
+  color: #aaa;
   font-size: 14px;
 }
 
 /* Языковые кнопки */
 .lang-switch button {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: transparent;
+  border: 1px solid #555;
   padding: 6px 10px;
   border-radius: 6px;
   margin-right: 6px;
   cursor: pointer;
+  color: #eee;
   transition: all 0.2s ease;
 }
 
 .lang-switch button.active {
-  background: #ff9900;
-  border-color: #ff7700;
+  background: linear-gradient(135deg, #03e1ff, #7c2ae8);
+  border: none;
   color: #fff;
 }
 
 .lang-switch button:hover {
   transform: translateY(-2px);
+  border-color: #03e1ff;
 }
 
 /* Кнопки */
@@ -95,25 +97,25 @@ body {
 }
 
 .btn.primary {
-  background: linear-gradient(135deg, #ff4d4d, #ff9900);
+  background: linear-gradient(135deg, #00ffa3, #03e1ff, #7c2ae8);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(255,77,77,0.4);
+  box-shadow: 0 0 12px rgba(3,225,255,0.6);
 }
 
 .btn.primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(255,77,77,0.6);
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(124,42,232,0.8);
 }
 
 .btn.outline {
-  border: 2px solid #ff4d4d;
-  color: #ff4d4d;
+  border: 2px solid #03e1ff;
+  color: #03e1ff;
   background: transparent;
 }
 
 .btn.outline:hover {
-  background: #ff4d4d;
-  color: #fff;
+  background: #03e1ff;
+  color: #111;
 }
 
 /* Hero */
@@ -131,10 +133,13 @@ body {
 #hero h2 {
   font-size: 2rem;
   margin-bottom: 12px;
+  background: linear-gradient(135deg, #00ffa3, #03e1ff, #7c2ae8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .lead {
-  color: #222;
+  color: #ddd;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -142,7 +147,7 @@ body {
 .hero-art img {
   max-width: 100%;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
 }
 
@@ -152,13 +157,14 @@ body {
 
 /* Карточки */
 .card {
-  background: #fff;
+  background: rgba(30,30,50,0.9);
   border-radius: 14px;
   padding: 20px;
   margin: 20px 0;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
+  color: #eee;
 }
 
 .card:hover {
@@ -186,13 +192,14 @@ body {
 .meme {
   flex: 1;
   min-width: 200px;
-  background: #fff;
+  background: rgba(30,30,50,0.95);
   padding: 14px;
   border-radius: 12px;
-  border: 1px solid #eee;
+  border: 1px solid rgba(255,255,255,0.05);
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
+  color: #fff;
 }
 
 .meme:hover {
@@ -204,6 +211,7 @@ body {
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,255,163,0.5);
 }
 
 /* Соцсети */
@@ -216,16 +224,16 @@ body {
 .socials a {
   display: inline-block;
   padding: 10px 14px;
-  background: #fff;
+  background: rgba(20,20,40,0.8);
   border-radius: 8px;
-  border: 1px solid #eee;
+  border: 1px solid rgba(255,255,255,0.05);
   text-decoration: none;
-  color: #111;
+  color: #03e1ff;
   transition: all 0.2s ease;
 }
 
 .socials a:hover {
-  background: #ff4d4d;
+  background: linear-gradient(135deg, #00ffa3, #03e1ff, #7c2ae8);
   color: #fff;
   transform: translateY(-2px);
 }
@@ -233,10 +241,11 @@ body {
 /* Футер */
 .site-footer {
   padding: 30px 0;
-  background: rgba(0,0,0,0.8);
+  background: rgba(10,10,20,0.95);
   text-align: center;
-  color: #fff;
+  color: #aaa;
   margin-top: 40px;
+  font-size: 14px;
 }
 
 /* Адаптив */
